@@ -59,41 +59,8 @@ angular.module('TodoApp', [])
             }
         }
 
-        $scope.test = function (field) {
-            for (let i = 0; i < c.tasks.length; i++) {
-                if (c.tasks[i].edit === field) {
-                    c.tasks[i].edit = null;
-
-                    // Make it rerender
-                    $scope.$digest()
-
-                    // Break the loop
-                    break;
-                }
-            }
-        }
-
-
 
         function uuid() {
             return Math.random().toString(16).slice(2)
-        }
-    })
-    .directive('okButton', function () {
-        function link(scope, element, attrs) {
-            element.bind('click', function () {
-                const allowedFields = ['state', 'by', 'description', 'text']
-                const field = attrs.field;
-                if (allowedFields.indexOf(field) === -1) return
-
-                // Trigger parent scope field update
-                scope.test(attrs.field)
-            })
-        }
-
-        return {
-            link: link,
-            restrict: 'E',
-            template: '<button class="ok-btn">OK</button>'
         }
     })

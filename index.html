@@ -102,14 +102,14 @@
                     <td ng-show="task.edit != 'text'" ng-click="task.edit = 'text'">{{task.text}}</td>
                     <td ng-show="task.edit == 'text'"><input class="edit-field-input" value="task.text"
                             ng-model="task.text" />
-                        <ok-button field="text"></ok-button>
+                        <button class="ok-btn" ng-click="task.edit = null">OK</button>
                     </td>
 
                     <td ng-show="task.edit != 'description'" ng-click="task.edit = 'description'">{{task.description}}
                     </td>
                     <td ng-show="task.edit == 'description'"><input class="edit-field-input" value="task.description"
                             ng-model="task.description" />
-                        <ok-button field="description"></ok-button>
+                        <button class="ok-btn" ng-click="task.edit = null">OK</button>
                     </td>
 
                     <td ng-show="task.edit != 'state'" ng-click="task.edit = 'state'">{{task.state}}</td>
@@ -117,13 +117,13 @@
                         <select ng-model="task.state" class="edit-field-input"
                             ng-options="states.label as states.label for states in state_values"
                             class="text-black"></select>
-                        <ok-button field="state"></ok-button>
+                        <button class="ok-btn" ng-click="task.edit = null">OK</button>
                     </td>
 
                     <td ng-show="task.edit != 'by'" ng-click="task.edit = 'by'">{{task.by}}</td>
                     <td ng-show="task.edit == 'by'"><input class="edit-field-input" value="task.by"
                             ng-model="task.by" />
-                        <ok-button field="by"></ok-button>
+                        <button class="ok-btn" ng-click="task.edit = null">OK</button>
                     </td>
 
                 </tr>
