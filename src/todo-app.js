@@ -2,7 +2,7 @@ angular.module('TodoApp', [])
     .controller('AppCtrl', function ($scope) {
         $scope.title = 'Todo App'
         $scope.links = [
-            { text: 'Github', href: 'https://github.com/ligmahummus' },
+            { text: 'Github', href: 'https://github.com/xarielah' },
         ]
 
         const c = this;
